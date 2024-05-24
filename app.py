@@ -13,7 +13,7 @@ ROOT_FOLDER = "Projects/Personal Website/frontend/personal-website/build"
 app = Flask(__name__, static_folder=ROOT_FOLDER, static_url_path='/')
 # app.debug = False
 
-app = Flask(__name__)
+# app = Flask(__name__)
 
 CORS(app)  # allows cors for our frontend
 
