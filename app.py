@@ -9,11 +9,11 @@ import logging
 
 load_dotenv()
 
-ROOT_FOLDER = "Projects/Personal Website/frontend/personal-website/build"
-app = Flask(__name__, static_folder=ROOT_FOLDER, static_url_path='/')
+# ROOT_FOLDER = "Projects/Personal Website/frontend/personal-website/build"
+# app = Flask(__name__, static_folder=ROOT_FOLDER, static_url_path='/')
 # app.debug = False
 
-# app = Flask(__name__)
+app = Flask(__name__)
 
 CORS(app)  # allows cors for our frontend
 
@@ -33,7 +33,7 @@ database = client.get_database('personal_website')
 
 @app.route('/')
 def index():
-    return app.send_static_file('index.html')
+    return "Hello world"
 
 @app.route('/projects')
 def get_projects():
